@@ -39,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* <div>
+          <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-center">
@@ -68,4 +68,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; */}
+export default Footer;
