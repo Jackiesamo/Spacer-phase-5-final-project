@@ -15,3 +15,7 @@ class BookingResponse(BaseModel):
     end_time: datetime
     total_amount: float
     status: str
+
+    class Config:
+        from_attributes = True
+
