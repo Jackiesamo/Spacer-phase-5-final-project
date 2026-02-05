@@ -1,3 +1,4 @@
+
 import { FiMapPin, FiUsers, FiWifi } from 'react-icons/fi';
 import placeholderImage from '../assets/images/placeholder.svg';
 
@@ -15,7 +16,7 @@ const SpaceCard = ({ space, onBookClick }) => {
         />
       </div>
       
-      {/* <div className="p-6">
+      <div className="p-6">
         <h3 className="text-xl font-semibold mb-2">{space.name}</h3>
         <div className="flex items-center text-gray-600 mb-2">
           <FiMapPin className="mr-1" />
@@ -42,7 +43,7 @@ const SpaceCard = ({ space, onBookClick }) => {
             onClick={() => onBookClick(space)}
             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
           >
-            Book Now
+            {/* Book Now
           </button>
         </div>
       </div>
