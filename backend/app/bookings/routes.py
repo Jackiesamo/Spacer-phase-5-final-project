@@ -16,3 +16,13 @@ def get_db():
         db.close()
 
 
+@router.post(
+    "/",
+    response_model=BookingResponse
+)
+def book_space(
+    data: BookingCreate,
+    db: Session = Depends(get_db),
+    user=Depends(get_current_user)
+):
+    return create_booking(db, user, data)
