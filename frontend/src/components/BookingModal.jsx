@@ -24,25 +24,25 @@ const BookingModal = ({ isOpen, onClose, space }) => {
       return;
     }
 
-//     const bookingData = {
-//       spaceId: space.id,
-//       userId: user.id,
-//       spaceName: space.name,
-//       userName: user.name,
-//       userEmail: user.email,
-//       ...formData,
-//       totalPrice: calculatePrice()
-//     };
+    const bookingData = {
+      spaceId: space.id,
+      userId: user.id,
+      spaceName: space.name,
+      userName: user.name,
+      userEmail: user.email,
+      ...formData,
+      totalPrice: calculatePrice()
+    };
 
-//     try {
-//       const result = await dispatch(createBooking(bookingData)).unwrap();
-//       toast.success('Booking created successfully!');
-//       onClose();
-//       setFormData({ date: '', startTime: '', endTime: '', purpose: '' });
-//     } catch (error) {
-//       toast.error(error || 'Failed to create booking');
-//     }
-//   };
+    try {
+      const result = await dispatch(createBooking(bookingData)).unwrap();
+      toast.success('Booking created successfully!');
+      onClose();
+      setFormData({ date: '', startTime: '', endTime: '', purpose: '' });
+    } catch (error) {
+      toast.error(error || 'Failed to create booking');
+    }
+  };
 
 //   const calculatePrice = () => {
 //     if (!formData.startTime || !formData.endTime) return 0;
