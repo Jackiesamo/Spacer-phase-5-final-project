@@ -26,3 +26,13 @@ def book_space(
     user=Depends(get_current_user)
 ):
     return create_booking(db, user, data)
+
+@router.get(
+    "/me",
+    response_model=list[BookingResponse]
+)
+def my_bookings(
+    db: Session = Depends(get_db),
+    user=Depends(get_current_user)
+):
+    return list_user_bookings(db, user)
