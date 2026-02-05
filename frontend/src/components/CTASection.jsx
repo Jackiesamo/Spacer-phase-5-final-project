@@ -15,6 +15,7 @@ const CTASection = ({ onGetStartedClick }) => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={onGetStartedClick}
+            
             className="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-300 flex items-center justify-center"
           >
             Get Started Now <FiArrowRight className="ml-2" />
