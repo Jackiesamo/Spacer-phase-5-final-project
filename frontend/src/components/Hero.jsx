@@ -15,13 +15,13 @@ const Hero = ({ onGetStartedClick }) => {
     }
   };
 
-//   const handleAdminDashboard = () => {
-//     if (isAuthenticated && user?.role === 'admin') {
-//       navigate('/admin-dashboard');
-//     } else {
-//       onGetStartedClick();
-//     }
-//   };
+  const handleAdminDashboard = () => {
+    if (isAuthenticated && user?.role === 'admin') {
+      navigate('/admin-dashboard');
+    } else {
+      onGetStartedClick();
+    }
+  };
 //   return (
 //     <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20 mt-16">
 //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
