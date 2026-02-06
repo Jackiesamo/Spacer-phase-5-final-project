@@ -48,7 +48,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <FiPhone className="mr-3" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+254 712 345 678</span>
               </div>
               <div className="flex items-center">
                 <FiMapPin className="mr-3" />
