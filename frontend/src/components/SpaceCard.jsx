@@ -36,7 +36,7 @@ const SpaceCard = ({ space, onBookClick }) => {
         
         <div className="flex items-center justify-between">
           <div>
-            <span className="text-2xl font-bold text-blue-600">KSH {space.price}</span>
+            <span className="text-2xl font-bold text-blue-600">KSH {space.price.toLocaleString()}</span>
             <span className="text-gray-600">/{space.priceUnit || 'hour'}</span>
           </div>
           <button
