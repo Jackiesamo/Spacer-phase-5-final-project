@@ -67,7 +67,11 @@ const Navbar = ({ onLoginClick, dashboardType = null }) => {
           
           <div className="hidden md:flex items-center space-x-6">
             {!dashboardType && navItems.map((item, index) => (
-              <a key={index} href={item.href} className="text-gray-700 hover:text-blue-600">
+              <a 
+                key={index} 
+                href={item.href} 
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+              >
                 {item.label}
               </a>
             ))}
@@ -116,7 +120,12 @@ const Navbar = ({ onLoginClick, dashboardType = null }) => {
         <div className="md:hidden bg-white border-t">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {!dashboardType && navItems.map((item, index) => (
-              <a key={index} href={item.href} className="block px-3 py-2 text-gray-700">
+              <a 
+                key={index} 
+                href={item.href} 
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+              >
                 {item.label}
               </a>
             ))}

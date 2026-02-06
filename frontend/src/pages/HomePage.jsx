@@ -30,9 +30,11 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Navbar onLoginClick={handleGetStarted} />
       <main className="flex-1">
-        <Hero onGetStartedClick={handleGetStarted} />
+        <section id="home">
+          <Hero onGetStartedClick={handleGetStarted} />
+        </section>
 
-        <section className="max-w-6xl mx-auto px-6 py-12">
+        <section id="about" className="max-w-6xl mx-auto px-6 py-12">
           <h2 className="text-3xl font-semibold mb-4">Why Choose Spacer?</h2>
           <p className="text-gray-600 mb-8">Trusted by businesses and individuals across Kenya</p>
 
@@ -43,7 +45,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bg-gray-50 py-12">
+        <section id="spaces" className="bg-gray-50 py-12">
           <div className="max-w-6xl mx-auto px-6">
             <h3 className="text-2xl font-semibold mb-4">Browse by Space Type</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
