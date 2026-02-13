@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: spacer
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql+psycopg2://postgres:postgres@db:5432/spacer
+      SECRET_KEY: changeme
+      ACCESS_TOKEN_EXPIRE_MINUTES: '30'
+      ALGORITHM: HS256
+      PORT: 10000
+    ports:
+      - "8000:10000"
+    volumes:
+      - ./backend:/app
+
+volumes:
+  db_data:
